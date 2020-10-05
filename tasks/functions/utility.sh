@@ -110,3 +110,5 @@ toolStatusCurrent="current"
 toolsStatusSupported="supported"
 guestToolsCurrent="guestToolsCurrent"
 guestToolsSupportedOld="guestToolsSupportedOld"
+guestToolsSupportedNew="guestToolsSupportedNew"
+

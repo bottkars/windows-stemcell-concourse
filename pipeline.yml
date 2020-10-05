@@ -163,10 +163,10 @@ jobs:
       - in_parallel:
         - get: windows-stemcell-concourse-image
         - get: pipeline-resources
-          trigger: true
           passed: [update-base]
         - get: stembuild-release
           passed: [update-base]
+          trigger: true
           params:
             globs:
               - stembuild-linux-*
@@ -186,11 +186,11 @@ jobs:
       - in_parallel:
         - get: windows-stemcell-concourse-image
         - get: pipeline-resources
-          trigger: true
           passed: [clone-base]
         - get: lgpo
         - get: stembuild-release
           passed: [clone-base]
+          trigger: true
           params:
             globs:
               - stembuild-linux-*

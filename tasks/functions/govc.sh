@@ -581,6 +581,8 @@ function validateToolsVersionStatus(){
 			return 1
 		elif [[ ("${vmware_tools_status}" == *"${toolsStatusSupported}"*) && ("${toolVersionStatus}" == *"${guestToolsSupportedOld}"*) ]]; then
 			echo "VMware tools are running an old version but still compatible with the ESXi host, continuing."
+		elif [[ ("${vmware_tools_status}" == *"${toolsStatusSupported}"*) && ("${toolVersionStatus}" == *"${guestToolsSupportedNew}"*) ]]; then
+			echo "VMware tools are running an New version but still compatible with the ESXi host, continuing."
 		else
 			writeErr "VMware tools status is being reported in a bad state, no other details are available. Verify the version installed is compatible with the ESXi host it is on in vCenter."
 			return 1
